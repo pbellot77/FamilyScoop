@@ -73,10 +73,10 @@
             </objects>
             <point key="canvasLocation" x="1345" y="-91"/>
         </scene>
-        <!--View Controller-->
+        <!--Member Detail View Controller-->
         <scene sceneID="Lex-lS-bVn">
             <objects>
-                <viewController id="UqI-O2-vaf" sceneMemberID="viewController">
+                <viewController id="UqI-O2-vaf" customClass="MemberDetailViewController" customModule="FamilyScoop" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DH5-0h-Reb"/>
                         <viewControllerLayoutGuide type="bottom" id="nYQ-Lf-ySJ"/>
@@ -84,12 +84,81 @@
                     <view key="view" contentMode="scaleToFill" id="hmz-pw-gae">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X4V-UY-v2b">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="tMl-gt-3rZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="477"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pat.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="qsq-g0-EEf">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="240"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="240" id="f4T-vg-CFx"/>
+                                                    <constraint firstAttribute="width" constant="240" id="nsm-4i-kZo"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Patrick Bellot" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fou-sZ-mFU">
+                                                <rect key="frame" x="0.0" y="255" width="375" height="42"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uke-oV-qAW">
+                                                <rect key="frame" x="0.0" y="312" width="375" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="39" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgU-mt-A20">
+                                                <rect key="frame" x="0.0" y="357" width="375" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hometown:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kwi-Ef-buO">
+                                                <rect key="frame" x="0.0" y="402" width="375" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Iberia, La." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VRW-Lp-nKw">
+                                                <rect key="frame" x="0.0" y="447" width="375" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="tMl-gt-3rZ" secondAttribute="bottom" id="WaO-Am-f9x"/>
+                                    <constraint firstItem="tMl-gt-3rZ" firstAttribute="width" secondItem="X4V-UY-v2b" secondAttribute="width" id="YX0-BP-5oo"/>
+                                    <constraint firstItem="tMl-gt-3rZ" firstAttribute="leading" secondItem="X4V-UY-v2b" secondAttribute="leading" id="mBd-aa-Vph"/>
+                                    <constraint firstItem="tMl-gt-3rZ" firstAttribute="top" secondItem="X4V-UY-v2b" secondAttribute="top" id="ybn-j3-5NY"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="X4V-UY-v2b" firstAttribute="leading" secondItem="hmz-pw-gae" secondAttribute="leading" id="32N-wP-0wp"/>
+                            <constraint firstItem="X4V-UY-v2b" firstAttribute="top" secondItem="DH5-0h-Reb" secondAttribute="bottom" id="3Zb-Pb-9z2"/>
+                            <constraint firstItem="X4V-UY-v2b" firstAttribute="bottom" secondItem="nYQ-Lf-ySJ" secondAttribute="top" id="TLt-FA-d4O"/>
+                            <constraint firstAttribute="trailing" secondItem="X4V-UY-v2b" secondAttribute="trailing" id="bP4-S5-624"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="ageLabel1" destination="uke-oV-qAW" id="qD7-2v-knU"/>
+                        <outlet property="ageLabel2" destination="bgU-mt-A20" id="BRq-ZZ-60o"/>
+                        <outlet property="hometownLabel1" destination="Kwi-Ef-buO" id="jfl-vy-sTZ"/>
+                        <outlet property="hometownLabel2" destination="VRW-Lp-nKw" id="Cje-PY-yyn"/>
+                        <outlet property="imageView" destination="qsq-g0-EEf" id="XqC-PR-eb6"/>
+                        <outlet property="nameLabel" destination="Fou-sZ-mFU" id="uAN-tY-gV3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UKa-Si-c67" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2055" y="-91"/>
+            <point key="canvasLocation" x="2053.5999999999999" y="-91.304347826086968"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="A5O-uG-L1a">
@@ -122,4 +191,7 @@
             <point key="canvasLocation" x="662" y="554"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="pat.jpg" width="720" height="1280"/>
+    </resources>
 </document>

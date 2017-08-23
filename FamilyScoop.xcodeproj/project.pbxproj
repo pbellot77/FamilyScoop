@@ -17,6 +17,7 @@
 		BAF628E51F4CAE5900AA0A9A /* teagan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BAF628E41F4CAE5900AA0A9A /* teagan.jpg */; };
 		BAF628E71F4CAF0C00AA0A9A /* miles.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BAF628E61F4CAF0C00AA0A9A /* miles.jpg */; };
 		BAF628E91F4DF62500AA0A9A /* MemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF628E81F4DF62500AA0A9A /* MemberViewController.swift */; };
+		BAF628EC1F4E0A7800AA0A9A /* MemberDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF628EB1F4E0A7800AA0A9A /* MemberDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		BAF628E41F4CAE5900AA0A9A /* teagan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = teagan.jpg; sourceTree = "<group>"; };
 		BAF628E61F4CAF0C00AA0A9A /* miles.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = miles.jpg; sourceTree = "<group>"; };
 		BAF628E81F4DF62500AA0A9A /* MemberViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberViewController.swift; sourceTree = "<group>"; };
+		BAF628EB1F4E0A7800AA0A9A /* MemberDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				BAF628EA1F4DF67500AA0A9A /* images */,
 				BAF628CC1F4CA44600AA0A9A /* AppDelegate.swift */,
 				BAF628E81F4DF62500AA0A9A /* MemberViewController.swift */,
+				BAF628EB1F4E0A7800AA0A9A /* MemberDetailViewController.swift */,
 				BAF628DE1F4CA76600AA0A9A /* Family.swift */,
 				BAF628D01F4CA44600AA0A9A /* Main.storyboard */,
 				BAF628D31F4CA44600AA0A9A /* Assets.xcassets */,
@@ -166,6 +169,7 @@
 			files = (
 				BAF628E91F4DF62500AA0A9A /* MemberViewController.swift in Sources */,
 				BAF628CD1F4CA44600AA0A9A /* AppDelegate.swift in Sources */,
+				BAF628EC1F4E0A7800AA0A9A /* MemberDetailViewController.swift in Sources */,
 				BAF628DF1F4CA76600AA0A9A /* Family.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

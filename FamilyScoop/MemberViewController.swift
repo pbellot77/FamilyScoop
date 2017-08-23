@@ -13,6 +13,7 @@ class MemberViewController: UIViewController, UITableViewDelegate, UITableViewDa
   @IBOutlet weak var tableView: UITableView!
   
   var members = Member.createMember()
+  var selectedMember = Member()
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -35,7 +36,14 @@ class MemberViewController: UIViewController, UITableViewDelegate, UITableViewDa
   }
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let member = self.members[indexPath.row]
+    self.selectedMember = member
     self.performSegue(withIdentifier: "moveToDetailSegue", sender: nil)
+  }
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    let detailVC = segue.destination as! MemberDetailViewController
+    detailVC.member = self.selectedMember
   }
   
   
