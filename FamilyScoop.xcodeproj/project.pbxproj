@@ -16,6 +16,7 @@
 		BAF628E31F4CADA700AA0A9A /* bre.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BAF628E21F4CADA700AA0A9A /* bre.jpg */; };
 		BAF628E51F4CAE5900AA0A9A /* teagan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BAF628E41F4CAE5900AA0A9A /* teagan.jpg */; };
 		BAF628E71F4CAF0C00AA0A9A /* miles.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BAF628E61F4CAF0C00AA0A9A /* miles.jpg */; };
+		BAF628E91F4DF62500AA0A9A /* MemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF628E81F4DF62500AA0A9A /* MemberViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		BAF628E21F4CADA700AA0A9A /* bre.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bre.jpg; sourceTree = "<group>"; };
 		BAF628E41F4CAE5900AA0A9A /* teagan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = teagan.jpg; sourceTree = "<group>"; };
 		BAF628E61F4CAF0C00AA0A9A /* miles.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = miles.jpg; sourceTree = "<group>"; };
+		BAF628E81F4DF62500AA0A9A /* MemberViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,11 +64,9 @@
 		BAF628CB1F4CA44600AA0A9A /* FamilyScoop */ = {
 			isa = PBXGroup;
 			children = (
-				BAF628E01F4CAA2B00AA0A9A /* pat.jpg */,
-				BAF628E21F4CADA700AA0A9A /* bre.jpg */,
-				BAF628E41F4CAE5900AA0A9A /* teagan.jpg */,
-				BAF628E61F4CAF0C00AA0A9A /* miles.jpg */,
+				BAF628EA1F4DF67500AA0A9A /* images */,
 				BAF628CC1F4CA44600AA0A9A /* AppDelegate.swift */,
+				BAF628E81F4DF62500AA0A9A /* MemberViewController.swift */,
 				BAF628DE1F4CA76600AA0A9A /* Family.swift */,
 				BAF628D01F4CA44600AA0A9A /* Main.storyboard */,
 				BAF628D31F4CA44600AA0A9A /* Assets.xcassets */,
@@ -74,6 +74,17 @@
 				BAF628D81F4CA44600AA0A9A /* Info.plist */,
 			);
 			path = FamilyScoop;
+			sourceTree = "<group>";
+		};
+		BAF628EA1F4DF67500AA0A9A /* images */ = {
+			isa = PBXGroup;
+			children = (
+				BAF628E01F4CAA2B00AA0A9A /* pat.jpg */,
+				BAF628E21F4CADA700AA0A9A /* bre.jpg */,
+				BAF628E41F4CAE5900AA0A9A /* teagan.jpg */,
+				BAF628E61F4CAF0C00AA0A9A /* miles.jpg */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,6 +164,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAF628E91F4DF62500AA0A9A /* MemberViewController.swift in Sources */,
 				BAF628CD1F4CA44600AA0A9A /* AppDelegate.swift in Sources */,
 				BAF628DF1F4CA76600AA0A9A /* Family.swift in Sources */,
 			);
@@ -320,6 +332,7 @@
 				BAF628DD1F4CA44600AA0A9A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

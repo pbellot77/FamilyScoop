@@ -14,18 +14,34 @@
             <objects>
                 <splitViewController id="LdF-v5-apQ" sceneMemberID="viewController">
                     <connections>
-                        <segue destination="NTO-gU-5ht" kind="relationship" relationship="masterViewController" id="av6-Zg-2ym"/>
                         <segue destination="M4P-Ku-A3H" kind="relationship" relationship="detailViewController" id="Gp8-Ri-wEG"/>
+                        <segue destination="Tim-cM-4Ay" kind="relationship" relationship="masterViewController" id="oFN-7j-8Op"/>
                     </connections>
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6bk-1R-c4M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-103" y="56"/>
         </scene>
-        <!--View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="k7l-HM-s0r">
+            <objects>
+                <navigationController id="Tim-cM-4Ay" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WvV-hS-06O">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="NTO-gU-5ht" kind="relationship" relationship="rootViewController" id="I9j-rJ-awq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wR3-6O-ycz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="614" y="-91"/>
+        </scene>
+        <!--Family-->
         <scene sceneID="Sg7-9x-bGr">
             <objects>
-                <viewController id="NTO-gU-5ht" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="NTO-gU-5ht" customClass="MemberViewController" customModule="FamilyScoop" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jGM-l0-3VE"/>
                         <viewControllerLayoutGuide type="bottom" id="1Vd-ud-3In"/>
@@ -33,12 +49,47 @@
                     <view key="view" contentMode="scaleToFill" id="4tk-nB-Xwn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5Eg-wC-zcW">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="5Eg-wC-zcW" firstAttribute="leading" secondItem="4tk-nB-Xwn" secondAttribute="leading" id="4kK-Ze-ZL3"/>
+                            <constraint firstItem="1Vd-ud-3In" firstAttribute="top" secondItem="5Eg-wC-zcW" secondAttribute="bottom" id="OYM-JJ-Mbh"/>
+                            <constraint firstAttribute="trailing" secondItem="5Eg-wC-zcW" secondAttribute="trailing" id="SGB-hb-F8P"/>
+                            <constraint firstItem="5Eg-wC-zcW" firstAttribute="top" secondItem="jGM-l0-3VE" secondAttribute="bottom" id="fDj-fd-UL8"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Family" id="N01-W3-wqS"/>
+                    <connections>
+                        <outlet property="tableView" destination="5Eg-wC-zcW" id="rXn-vo-Fk6"/>
+                        <segue destination="UqI-O2-vaf" kind="showDetail" identifier="moveToDetailSegue" id="2rd-LR-5QP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fRd-5f-Es2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="660" y="-91"/>
+            <point key="canvasLocation" x="1345" y="-91"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Lex-lS-bVn">
+            <objects>
+                <viewController id="UqI-O2-vaf" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DH5-0h-Reb"/>
+                        <viewControllerLayoutGuide type="bottom" id="nYQ-Lf-ySJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hmz-pw-gae">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UKa-Si-c67" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2055" y="-91"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="A5O-uG-L1a">
@@ -51,7 +102,19 @@
                     <view key="view" contentMode="scaleToFill" id="2ny-Zm-am6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a Member" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f2U-I9-WyE">
+                                <rect key="frame" x="75.5" y="315.5" width="224.5" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="f2U-I9-WyE" firstAttribute="centerX" secondItem="2ny-Zm-am6" secondAttribute="centerX" id="8AN-yu-1DW"/>
+                            <constraint firstItem="f2U-I9-WyE" firstAttribute="centerY" secondItem="2ny-Zm-am6" secondAttribute="centerY" id="BPH-v6-QQg"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TP1-CT-Yvv" userLabel="First Responder" sceneMemberID="firstResponder"/>
