@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MemberViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class MemberViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISplitViewControllerDelegate {
 
   @IBOutlet weak var tableView: UITableView!
   
@@ -20,6 +20,13 @@ class MemberViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     self.tableView.dataSource = self
     self.tableView.delegate = self
+    
+    self.splitViewController?.preferredDisplayMode = .allVisible
+    self.splitViewController?.delegate = self
+  }
+  
+  func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController: UIViewController, onto primaryViewController: UIViewController) -> Bool {
+    return true
   }
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -45,12 +52,4 @@ class MemberViewController: UIViewController, UITableViewDelegate, UITableViewDa
     let detailVC = segue.destination as! MemberDetailViewController
     detailVC.member = self.selectedMember
   }
-  
-  
-  
-  
-  
-  
-  
-  
 }// end of class
